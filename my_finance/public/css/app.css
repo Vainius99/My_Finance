@@ -634,6 +634,7 @@ progress {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
+  height:80px;
 }
 
 @media (min-width: 576px) {
@@ -658,7 +659,7 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    max-width: 100%;
   }
 }
 .row {
@@ -7462,8 +7463,13 @@ textarea.form-control-lg {
 }
 
 .px-5 {
-  padding-right: 3rem !important;
-  padding-left: 3rem !important;
+  padding-right: 1rem !important;
+  padding-left: 12rem !important;
+}
+@media (max-width: 767.98px) {
+    .px-5 {
+    padding-left: 2rem !important;
+    }
 }
 
 .py-0 {
@@ -11286,4 +11292,24 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.sidebar {
+    --bs-bg-opacity: 0.8;
+    background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+    position: fixed;
+    display: table-cell;
+    width: 180px;
+    height: 100%;
+    top: 95px;
+}
+.sidebar, a {
+    color: white;
+}
+.sidebar-btn {
+    margin: 2px;
+    width:98%;
+}
+.logo {
+    position: absolute;
+    left:0px;
 }

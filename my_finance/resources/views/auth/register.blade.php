@@ -63,9 +63,10 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Register') }}
                                 </button>
+                                <a class="btn btn-primary" href="{{ route('login') }}">{{ __('Back') }}</a>
                             </div>
                         </div>
                     </form>

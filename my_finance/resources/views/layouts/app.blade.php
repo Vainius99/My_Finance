@@ -20,16 +20,20 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body background="{{ asset('assets/background.jpg') }}" style="background-size: 230vh;">
+    {{-- <div class="col-md-4 col-lg-4 col-sm-12">
+        @include('layouts.sidebar')
+    </div> --}}
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-black shadow-sm">
             <div class="container">
-
-                <svg  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="200" height="80" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 20">
-                    <path d="M10.5 6l-2-2H2l.7 9.5L4.2 6h6.3zM5 7L3 17h13l2-10H5z" fill="yellow"/>
-                    <text x="27%" y="65%" dominant-baseline="middle" text-anchor="middle" font-size="4" font-weight="bold";>Mano</text>
-                    <text x="63%" y="65%" dominant-baseline="middle" text-anchor="middle" font-size="4" fill="#ffffff" >Finansai</text>
-                </svg>
-
+                <div class="logo">
+                    <svg  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="200" height="80" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 20">
+                        <path d="M10.5 6l-2-2H2l.7 9.5L4.2 6h6.3zM5 7L3 17h13l2-10H5z" fill="yellow"/>
+                        <text x="27%" y="65%" dominant-baseline="middle" text-anchor="middle" font-size="4" font-weight="bold";>Mano</text>
+                        <text x="63%" y="65%" dominant-baseline="middle" text-anchor="middle" font-size="4" fill="#ffffff" >Finansai</text>
+                    </svg>
+                </div>
+                <a style="opacity: 0">home</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -72,8 +76,13 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
+        @if(Auth::check()) {
+            <div class="col-md-4 col-lg-4 col-sm-12">
+                @include('layouts.sidebar')
+            </div>
+        }
+        @endif
+        <main class="py-4 px-5">
             @yield('content')
         </main>
     </div>
