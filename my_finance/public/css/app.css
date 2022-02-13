@@ -4511,7 +4511,7 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #c5bd849e;
+  background-color: #c5bf84ee;
   background-clip: border-box;
   border: 0px solid rgb(0 0 0 / 90%);
   border-radius: 1.25rem;
@@ -11312,4 +11312,12 @@ textarea.form-control-lg {
 .logo {
     position: absolute;
     left:0px;
+}
+.btn-a {
+    background-color: #0f100f00;
+    color: #fff;
+    border-color: #212529;
+}
+.btn-a:hover {
+    color:var(--bs-yellow);
 }
